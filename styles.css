@@ -1,0 +1,553 @@
+
+         @font-face {
+         font-family: 'Brandon Grotesque Black';
+         src: url('fonts/brandon-grotesque-black-58a8a3e824392.otf') format('opentype');
+         font-weight: normal;
+         font-style: normal;
+         }
+ 
+         @font-face {
+         font-family: 'Brandon Grotesque Bold Italic';
+         src: url('fonts/brandon-grotesque-bold-italic-58a8a48221563.otf') format('opentype');
+         font-weight: normal;
+         font-style: normal;
+         }
+  
+         @font-face {
+         font-family: 'Brandon Grotesque Light';
+         src: url('fonts/brandon-grotesque-light-58a8a4b38001d.otf') format('opentype');
+         font-weight: normal;
+         font-style: normal;
+         }
+   
+         @font-face {
+         font-family: 'Brandon Grotesque Light Italic';
+         src: url('fonts/brandon-grotesque-light-italic-58a8a4ccb88be.otf') format('opentype');
+         font-weight: normal;
+         font-style: normal;
+         }
+
+         @font-face {
+         font-family: 'Brandon Grotesque Medium Italic';
+         src: url('fonts/brandon-grotesque-medium-italic-58a8a3c40866a.otf') format('opentype');
+         font-weight: normal;
+         font-style: normal;
+         }
+  
+         @font-face {
+         font-family: 'Brandon Grotesque Regular Italic';
+         src: url('fonts/brandon-grotesque-regular-italic-58a8a456c4724.otf') format('opentype');
+         font-weight: normal;
+         font-style: normal;
+         }
+
+         @font-face {
+         font-family: 'Brandon Grotesque Thin Italic';
+         src: url('fonts/brandon-grotesque-thin-italic-58a8a3a8861fe.otf') format('opentype');
+         font-weight: normal;
+         font-style: normal;
+         }
+
+         body {
+         font-family: 'Brandon Grotesque', sans-serif;
+         }
+         * {
+         box-sizing: border-box;
+         }
+         a{
+         text-decoration: none;
+         }
+         button{
+         cursor: pointer;
+         }
+         body {
+         max-width: 1440px;
+         margin: auto;
+         }
+         .product-carousel-wrapper {
+         display: grid;
+         grid-template-columns: 100px 1fr 480px
+         }
+         .thumbnails-wrapper{
+         height: 800px;
+         overflow: hidden;
+         }
+         .thumbnails {
+         display: flex;
+         flex-direction: column;
+         width: 150px;
+         gap: 8px;
+         }
+         .thumbnails img {
+         width: 95px;
+         }
+         .active{
+         border-bottom: 3px solid black;
+         }
+         .slider-wrapper {
+         margin: 0 5px;
+         position: relative;
+         overflow: hidden;
+         }
+         .slides-container {
+         width: 100%;
+         display: flex;
+         }
+         .slide-arrow {
+         position: absolute;
+         display: flex;
+         top: 0;
+         bottom: 0;
+         margin: auto;
+         height: 4rem;
+         background-color: white;
+         border: none;
+         width: 2rem;
+         font-size: 3rem;
+         padding: 0;
+         cursor: pointer;
+         opacity: 0.5;
+         transition: opacity 100ms;
+         z-index: 2;
+         }
+         .slide-arrow:hover,
+         .slide-arrow:focus {
+         opacity: 1;
+         }
+         #slide-arrow-prev {
+         left: 0;
+         padding-left: 0.25rem;
+         border-radius: 0 2rem 2rem 0;
+         }
+         #slide-arrow-next {
+         right: 0;
+         padding-left: 0.75rem;
+         border-radius: 2rem 0 0 2rem;
+         }
+         .slide {
+         width: 100%;
+         height: 100%;
+         flex: 1 0 100%;
+         background-color: #eeeeee;
+         }
+         .slide>img {
+         display: block;
+         margin: auto;
+         max-width: 100%;
+         height: auto;
+         }
+         .desc-section{
+         margin-left: 10px;
+         }
+         .product_name {
+         font-size: 40px;
+         font-weight: 400;
+         line-height: 48px;
+         text-transform: uppercase;
+         color: #000;
+         margin-bottom: 14px;
+         letter-spacing: normal;
+         margin-top: 0;
+         color: #0c2752;
+         }
+         .price{
+         font-family: Brandon Grotesque Light;
+         color: #002855;
+         font-size: 24px;
+         line-height: 32px;
+         letter-spacing: normal
+         }
+         .subtitle{
+         font-family: Brandon Grotesque Light;
+         letter-spacing: normal;
+         font-size: 16px;
+         font-weight: 400;
+         padding-right: 20px;
+         line-height: 20px;
+         margin: 10px 0;
+         margin-bottom: 22px;
+         }
+         .rating-star{
+         content: "";
+         display: inline-block;
+         width: 16px;
+         height: 16px;
+         margin-right: 4px;
+         background: url("img/icon-yotpo-star-empty.svg") no-repeat center center/contain;
+         }
+         .yotpo-stars a{
+         font-family: sans-serif;
+         font-style: normal;
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 20px;
+         align-items: center;
+         margin-left: 5px;
+         letter-spacing: normal;
+         color: #0c2752;
+         text-decoration: none;
+         }
+         .sku{
+         font-weight: 400;
+         color: #0c2752;
+         font-size: 12px;
+         line-height: 24px;
+         margin-top: 8px;
+         margin-bottom: 8px;
+         letter-spacing: 2px;
+         }
+         .short-desc{
+         font-family: Brandon Grotesque Light;
+         font-size: 17px;
+         line-height: 22px;
+         font-weight: 400;
+         }
+         .short-desc .btn-read-more{
+         margin: 10px 0 20px 0;
+         display: block;
+         }
+         .color-selector{
+         margin-bottom: 20px;
+         }
+         .option-name{
+         font-size: 18px;
+         line-height: 22px;
+         color: #002855;
+         font-family: Brandon Grotesque;
+         text-decoration: none;
+         }
+         .variant-name{
+         font-family: Brandon Grotesque Light;
+         font-size: 18px;
+         line-height: 22px;
+         color: #000;
+         padding-left: 5px;
+         text-decoration: none;
+         }
+ 
+         input[type="checkbox"] {
+         display: none;
+         }
+       
+         .round-button {
+         display: inline-block;
+         border-radius: 50%;
+         width: 32px; 
+         height: 32px;
+         text-align: center;
+         line-height: 50px; 
+         background-color: #a91b2e; 
+         color: white; 
+         cursor: pointer;
+         font-size: 16px; 
+         border: none;
+         transition: border 0.3s; 
+         }
+ /
+         input[type="checkbox"]:checked + .round-button {
+         border: 2px solid #0C2752; 
+         }
+         .selection-wrapper{
+         margin-top: 30px;
+         background: #F0EDE9;
+         padding: 8px 16px;
+         margin-bottom: 8px;
+         }
+         .pdp_selection{
+         font-family: Brandon Grotesque Light;
+         color: #0c2752;
+         font-size: 16px;
+         line-height: 20px;
+         margin-bottom: 0;
+         margin-top: 0;
+         }
+         .pdp_selection-results{
+         font-family: Brandon Grotesque Light;
+         color: #0c2752;
+         font-size: 16px;
+         line-height: 20px;
+         margin-top: 5px;
+         margin-bottom: 0;
+         }
+         .pdp_selection-results>span{
+         font-family: Brandon Grotesque;
+         }
+         .choose-size{
+         display: flex;
+         border: 1px solid #0C2752;
+         padding: 0 16px;
+         justify-content: space-between;
+         align-items: center;
+         height: 48px;
+         width: 100%;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 22px;
+         letter-spacing: 1.96px;
+         text-transform: uppercase;
+         color: #0c2752;
+         background: #fff;
+         margin-bottom: 5px;
+         }    
+         .choose-size > span{
+         transform: rotate(90deg);
+         }
+         .choose-size-overlay{
+         background: rgba(0,0,0,.69);
+         position: fixed;
+         top: 0;
+         right: 0;
+         height: 100%;
+         width: 100%;
+         visibility: hidden;
+         }
+         .choose-size-overlay.active{
+         transition: 0s;
+         visibility: visible;
+         }
+         .choose-size-form{
+         position: fixed;
+         height: 100%;
+         width: 430px;
+         background-color: white;
+         right: -430px;
+         transition: 1s;
+         padding: 10px;
+         }
+         .active .choose-size-form{
+         transition: 1s;
+         right: 0;
+         }
+         .size-button {
+         display: inline-block;
+         padding: 10px;
+         margin: 5px;
+         font-size: 16px;
+         cursor: pointer;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         }
+         .selected {
+         background-color: #007bff;
+         color: #fff;
+         }
+         .button.buy, .button.add{
+         background-color: #0c2752;
+         border: 1px solid #0C2752;
+         color: #fff;
+         box-shadow: none;
+         line-height: 1.2;
+         padding: 10px 0;
+         }
+         .add{
+         display: flex;
+         justify-content: center;
+         align-content: center;
+         flex-wrap: wrap;
+         width: 100%;
+         height: 64px;
+         border-radius: 0;
+         min-width: 271px;
+         font-family: Brandon Grotesque Black;
+         font-size: 16px;
+         text-transform: uppercase;
+         gap: 11px;
+         }
+         .add>span{
+         line-height: 25px;
+         }
+         .buy{
+         width: 100%;
+         font-family: Brandon Grotesque Black;
+         font-size: 16px;
+         text-transform: uppercase;
+         line-height: 25px;
+         }
+         .payment-options{
+         font-family: Brandon Grotesque Light;
+         display: block;
+         width: 100%;
+         text-align: center;
+         margin: 10px;
+         font-size: 16px;
+         color: #002855;
+         text-decoration: underline;
+         transition: .3s all;
+         }
+         .payment-options:hover{
+         text-decoration: underline;
+         cursor: pointer;
+         color: #86754f;
+         }
+         .purchase-buttons__divider {
+         width: 100%;
+         position: relative;
+         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 8px 0;
+         }
+         .purchase-buttons__divider span {
+         font-family: Brandon Grotesque Light;
+         padding: 6px 10px;
+         font-size: 10px;
+         }
+         .purchase-buttons__divider:before {
+         content: "";
+         display: inline-block;
+         height: 1px;
+         width: 40%;
+         background: #0C2752;
+         }
+         .purchase-buttons__divider:after {
+         content: "";
+         display: inline-block;
+         height: 1px;
+         width: 40%;
+         background: #0C2752;
+         }
+         .live-assistant{
+         display: flex;
+         border: 1px solid #0C2752;
+         padding: 0 16px;
+         justify-content: space-between;
+         align-items: center;
+         height: 48px;
+         width: 100%;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 22px;
+         letter-spacing: 1.96px;
+         text-transform: uppercase;
+         color: #0c2752;
+         background: #fff;
+         margin-bottom: 5px;
+         }
+         .live-assistant::after{
+         content: "";
+         position: relative;
+         background: url(img/Chats.svg) center no-repeat;
+         width: 24px;
+         height: 24px;
+         display: inline-block;
+         left: 1px;
+         top: 0;
+         }
+         .free-messages-wrapper p {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding-top: 24px;
+         font-size: 12px;
+         line-height: 18px;
+         letter-spacing: 1.68px;
+         color: #002855;
+         font-weight: 400;
+         text-align: center;
+         font-family: Brandon Grotesque Light;
+         position: relative;
+         padding-left: 22px;
+         padding-right: 22px;
+         }
+         .free-messages-wrapper p:first-child:before {
+         content: "";
+         position: initial;
+         background: url("img/Truck.svg") center no-repeat;
+         background-size: 100%;
+         width: 24px;
+         height: 24px;
+         display: block;
+         margin-right: 8px;
+         }
+         .free-messages-wrapper p:last-child:before {
+         content: "";
+         position: initial;
+         background: url("img/ArrowUDownLeft.svg") center no-repeat;
+         background-size: 100%;
+         width: 24px;
+         height: 24px;
+         display: block;
+         margin-right: 8px;
+         }
+         .choose-size__header{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 30px;
+         }
+         .size-buttons-wrapper{
+         display: flex;
+         justify-content: center;
+         margin-bottom: 50px;
+         }
+         .submit-button{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #0C2752;
+         color: #fff;
+         height: 48px;
+         border: 0;
+         width: 150px;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 22px;
+         letter-spacing: 1.96px;
+         text-transform: uppercase;
+         padding: 0 9px;
+         width: 100%;
+         text-align: center;
+         cursor: pointer;
+         }
+         .size-labels{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 50px;
+         }
+         .size-labels>p, size-labels>span{
+         font-family: Brandon Grotesque Light;
+         text-transform: initial;
+         font-size: 18px;
+         line-height: 22px;
+         color: #000;
+         margin-bottom: 0;
+         margin-top: 0;
+         }
+         .size-labels > span {
+         text-transform: uppercase;
+         }
+         .size-labels > span::before {
+         content: "";
+         position: relative;
+         background: url("img/CoatHanger.svg") center no-repeat;
+         width: 16px;
+         height: 16px;
+         display: inline-block;
+         left: -8px;
+         top: 2px;
+         }
+         @media (max-width: 800px) {
+         .product-carousel-wrapper {
+         display: grid;
+         grid-template-columns: 1fr;
+         }
+         .thumbnails-wrapper{
+         display: none;
+         }
+         .desc-section {
+         margin-top: 10px;;
+         }
+         .product_name {
+         font-size: 24px;
+         margin-bottom: 0;
+         }
+         .sku {
+         margin-top: 40px;
+         }
+         }
+      
